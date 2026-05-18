@@ -1,0 +1,124 @@
+/* ═══════════════════════════════════════════════════════════
+   Hermes HUD — 自定义主题包（5套）
+   
+   使用方法：
+   1. 将本文件放入 backend/static/assets/custom-themes.css
+   2. 修改 frontend/src/hooks/useTheme.tsx：
+      在 ThemeId 类型中添加 'deeptech' | 'academic' | 'metaprism' | 'dongman' | 'cyanink'
+      在 THEMES 数组中添加对应条目
+   3. 修改 frontend/src/i18n/translations.ts：
+      在 en 和 zh 部分添加主题名翻译
+   4. 重新构建：cd frontend && npm run build
+   5. 部署：cp frontend/dist/index.html backend/static/ && cp frontend/dist/assets/* backend/static/assets/
+   6. 重启服务
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── ① 深空科技 (Deep Tech) — NASA指挥中心 ────────────── */
+[data-theme="deeptech"] {
+  --hud-bg-deep: #003B36;
+  --hud-bg-surface: #084743;
+  --hud-bg-panel: #0D534D;
+  --hud-bg-hover: #145F58;
+  --hud-primary: #00E5C9;
+  --hud-primary-dim: #00B8A0;
+  --hud-primary-glow: rgba(0, 229, 201, 0.4);
+  --hud-secondary: #4AE8D6;
+  --hud-accent: #00E5C9;
+  --hud-text: #E8F4F2;
+  --hud-text-dim: #8AB8B0;
+  --hud-border: rgba(0, 229, 201, 0.20);
+  --hud-border-bright: rgba(0, 229, 201, 0.45);
+  --hud-success: #00E5C9;
+  --hud-warning: #FFD700;
+  --hud-error: #FF6B6B;
+  --hud-gradient-start: #003B36;
+  --hud-gradient-end: #00E5C9;
+}
+
+/* ── ② 学院典藏 (Academic Vault) — 图书馆精装书脊 ────── */
+[data-theme="academic"] {
+  --hud-bg-deep: #2D4A43;
+  --hud-bg-surface: #3A5750;
+  --hud-bg-panel: #47645C;
+  --hud-bg-hover: #547168;
+  --hud-primary: #C8A97E;
+  --hud-primary-dim: #A88B62;
+  --hud-primary-glow: rgba(200, 169, 126, 0.4);
+  --hud-secondary: #D4BC9B;
+  --hud-accent: #8B3A3A;
+  --hud-text: #F5F0E6;
+  --hud-text-dim: #B0A898;
+  --hud-border: rgba(200, 169, 126, 0.20);
+  --hud-border-bright: rgba(200, 169, 126, 0.45);
+  --hud-success: #6B9E7A;
+  --hud-warning: #C8A97E;
+  --hud-error: #8B3A3A;
+  --hud-gradient-start: #2D4A43;
+  --hud-gradient-end: #C8A97E;
+}
+
+/* ── ③ 元宇宙棱镜 (Meta Prism) — 全息故障艺术 ────────── */
+[data-theme="metaprism"] {
+  --hud-bg-deep: #004B45;
+  --hud-bg-surface: #0A5851;
+  --hud-bg-panel: #14655D;
+  --hud-bg-hover: #1E7269;
+  --hud-primary: #FFFFFF;
+  --hud-primary-dim: #CCCCCC;
+  --hud-primary-glow: rgba(184, 41, 221, 0.5);
+  --hud-secondary: #B829DD;
+  --hud-accent: #FF2A6D;
+  --hud-text: #FFFFFF;
+  --hud-text-dim: #A0C0BC;
+  --hud-border: rgba(184, 41, 221, 0.30);
+  --hud-border-bright: rgba(255, 42, 109, 0.50);
+  --hud-success: #00E5C9;
+  --hud-warning: #FF2A6D;
+  --hud-error: #FF0040;
+  --hud-gradient-start: #B829DD;
+  --hud-gradient-end: #FF2A6D;
+}
+
+/* ── ④ 动漫次元 (Anime Core) — 赛璐璐热血 ────────────── */
+[data-theme="dongman"] {
+  --hud-bg-deep: #00665C;
+  --hud-bg-surface: #0D756A;
+  --hud-bg-panel: #1A8477;
+  --hud-bg-hover: #279385;
+  --hud-primary: #FF6B35;
+  --hud-primary-dim: #D04F20;
+  --hud-primary-glow: rgba(255, 107, 53, 0.4);
+  --hud-secondary: #00D9FF;
+  --hud-accent: #FFD700;
+  --hud-text: #FFFFFF;
+  --hud-text-dim: #A0D8D0;
+  --hud-border: rgba(255, 107, 53, 0.30);
+  --hud-border-bright: rgba(0, 217, 255, 0.50);
+  --hud-success: #00D9FF;
+  --hud-warning: #FFD700;
+  --hud-error: #FF3366;
+  --hud-gradient-start: #FF6B35;
+  --hud-gradient-end: #00D9FF;
+}
+
+/* ── ⑤ 青绿国风 (Cyan Ink) — 青绿山水景泰蓝 ──────────── */
+[data-theme="cyanink"] {
+  --hud-bg-deep: #004B45;
+  --hud-bg-surface: #0A5650;
+  --hud-bg-panel: #14615A;
+  --hud-bg-hover: #1E6C65;
+  --hud-primary: #D4AF37;
+  --hud-primary-dim: #B89425;
+  --hud-primary-glow: rgba(212, 175, 55, 0.4);
+  --hud-secondary: #C9372C;
+  --hud-accent: #1E6E6E;
+  --hud-text: #F7F5F0;
+  --hud-text-dim: #A8C0BA;
+  --hud-border: rgba(212, 175, 55, 0.25);
+  --hud-border-bright: rgba(212, 175, 55, 0.50);
+  --hud-success: #6BA08A;
+  --hud-warning: #D4AF37;
+  --hud-error: #C9372C;
+  --hud-gradient-start: #004B45;
+  --hud-gradient-end: #1E6E6E;
+}
